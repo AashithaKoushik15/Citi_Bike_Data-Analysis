@@ -12,16 +12,17 @@ The columns/values represent the following:
 8.   24-Hour Passes Purchased (5 pm - 5 pm)
 9.   7-Day Passes Purchased (5 pm - 5 pm)
 
-Description: Write a program to read in the Citi bike data files and store it as a list of lists, and do the processing specified below. 
+Description: Program to read in the Citi bike data files and store it as a list of lists, and do the processing specified below. 
 Compare - as specified in the Procedure at 2.a - the average daily miles traveled (item 4) and the 24--hour pass purchased (item 8) for the months of June (summer) and January (winter).
 Input: No user input. The input are the files citi_bike.txtand citi_bike.csv
 Output: Print a blank line, then print the output as specified by the steps in the procedure.
+
 Procedure:
 1.Read in the citi_bike.txt file and create a list of lists.To do that, follow the instructions below:
-file = open (“citi_bike.txt”, “r”)# open citi bike text file for reading
-data = []# create empty listfor line in file:# read each lineparts = line.strip().split()# strip the white space and create list of itemsdata.append(parts)# append that line’s items list to the data listNote that using one index for data refers to the whole line of data for that date, while using two indices refers to a specific cell on a specific date. For example:
-data [2] = ['6/3/13', '8599', '81135', '31547.41', '323206.16', '29611', '1160', '1160', '221']which is the list of data items for June 3 (the third line - index starts at 0)
-data [4] [0] = 6/5/13 (the date of the 5th entry)
+a.  file = open (“citi_bike.txt”, “r”)# open citi bike text file for reading
+b.  data = []# create empty listfor line in file:# read each lineparts = line.strip().split()# strip the white space and create list of itemsdata.append(parts)# append that line’s items list to the data listNote that using one index for data refers to the whole line of data for that date, while using two indices refers to a specific cell on a specific date. For example:
+c.  data [2] = ['6/3/13', '8599', '81135', '31547.41', '323206.16', '29611', '1160', '1160', '221']which is the list of data items for June 3 (the third line - index starts at 0)
+d.  data [4] [0] = 6/5/13 (the date of the 5th entry)
 
 2.   Create a function “print_details” taking the list generated above as input and doing the following:
 a.   Loop through each list of your list of lists to calculate the average daily miles traveled and total24--hour pass purchases for that month
