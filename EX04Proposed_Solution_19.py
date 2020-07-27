@@ -1,8 +1,4 @@
-"""
-Author ----
-Date ----
 
-EMx24 Exercise 4:
 
 The idea is that you will have one list ('data') and each
 item/element in that list is itself a list. Those sublists 
